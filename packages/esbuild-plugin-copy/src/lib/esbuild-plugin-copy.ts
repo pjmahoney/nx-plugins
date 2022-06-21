@@ -120,7 +120,7 @@ function keepStructureCopyHandler(
 
     const startFragment = dir.replace(`/**`, '');
 
-    const [, preservedDirStructure] = globbedFromPath.split(startFragment);
+    const preservedDirStructure = globbedFromPath.replace(startFragment, '');
 
     const sourcePath = path.resolve(globbedFromPath);
 
